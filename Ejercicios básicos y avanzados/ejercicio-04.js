@@ -1,3 +1,4 @@
+
 //Dado el siguiente array:
 const aldeanos = ["Fibrilio", "Narciso", "Vacarena", "Tendo", "Nendo"];
 
