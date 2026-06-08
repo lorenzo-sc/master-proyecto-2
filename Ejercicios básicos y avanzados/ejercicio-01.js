@@ -37,4 +37,3 @@ console.log(suma);
 // Muestra todas las variables por consola.
 
 console.log(miSuperheroeFavorito + " " + numeroFavorito + " " + altura + " " + longitud + " " + suma);
-
