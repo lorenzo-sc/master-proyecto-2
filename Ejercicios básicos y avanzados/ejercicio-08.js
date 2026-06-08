@@ -47,5 +47,3 @@ function findRealLongestWord(stringList){ //la voy a llamar findRealLongestWord
 
 
 console.log('La palabra realmente más larga es -> "' + findRealLongestWord(avengers) + '"'); // llamamos a la función para que se ejecute en la consola respecto a la constante "avengers" que se definió al inicio
-
-
