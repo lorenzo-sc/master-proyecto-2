@@ -12,10 +12,15 @@ const avengers = [
     "Captain M.",
 ];
 
-function findLongestWord(stringList) {
-    for (let palabra of stringList) {
-    console.log(palabra);
-    }
-}
+function findLongestWord(stringList){
+    let LongestWord = ""; // Declaramos la variable LongestWord
 
-findLongestWord(avengers);
+    for (let Word of stringList){ //declaramos la variable Word y la asociamos en la función for
+    
+    if ( Word.length > LongestWord.length){ // si el tamaño de Word es mayor que el de LongestWord
+        LongestWord = Word}   // La palabra (Word) será la más larga (LongestWord)
+    }
+    return (LongestWord); //devolvemos la palabra más larga
+};
+
+console.log(findLongestWord(avengers)); // llamamos a la función para que se ejecute en la consola respecto a la constante "avengers" que se definió al inicio

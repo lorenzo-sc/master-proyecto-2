@@ -14,7 +14,7 @@ function greaterNumber(numberOne , numberTwo) {
 
 console.log(greaterNumber (4,4)); // modificando estos 2 parametros obtienes los 3 posibles resultados.
 
-// igualmente pongo que se ejecute un ejemplo para los 3 casos
+// igualmente pongo que se ejecute un ejemplo para los 3 casos posibles:
 
 console.log(greaterNumber(2, 4)); // mayor el segundo
 console.log(greaterNumber(9, 1)); // mayor el primero
