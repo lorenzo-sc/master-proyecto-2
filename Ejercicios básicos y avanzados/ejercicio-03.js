@@ -18,6 +18,3 @@ let i = m; // la variable i guarda el valor de m -> 5
 i *= c; // multiplicamos el valor de c -> 10
 
 console.log(i); // 3.5
-
-
-
