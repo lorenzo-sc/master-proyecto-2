@@ -1,13 +1,35 @@
+// 1. Luke Skywalker cumple años:
+
+// Modifica el siguiente código JavaScript para actualizar la edad de Luke Skywalker a 25 años.
+
 const jedi = {nombre: "Luke Skywalker", edad: 19};
 
 jedi.edad = 25;
 
 console.log(jedi);
 
+
+
+// 2. Presentación al estilo Leia Organa:
+// Crea tres variables con la siguiente información:
+// nombre: "Leia" , apellido: "Organa", edad: 20
+
+// Muestra un mensaje por consola que siga la siguiente estructura:
+// "Soy Leia Organa, tengo 20 años y soy una princesa de Alderaan."
+// Utiliza la concatenación para ello.
+
 const leia = {Nombre: "Leia", Apellido: "Organa", Edad: 20};
 
 console.log("Soy " + leia.Nombre + " " + leia.Apellido + ", tengo" + " " + leia.Edad + " años y soy una princesa de Alderaan.");
 
+
+
+// 3. Calculando el coste total de sables de luz:
+
+// Obtén el precio total de dos sables de luz: "Shoto de Yoda" y "sable de Darth Vader".
+// Imprime el resultado por consola utilizando console.log.
+// const sable1 = {nombre: "Shoto de Yoda", precio: 1500};
+// const sable2 = {nombre: "Sable de Darth Vader", precio: 2000};
 
 const sable1 = {nombre: "Shoto de Yoda", precio: 1500};
 const sable2 = {nombre: "Sable de Darth Vader", precio: 2000};
@@ -17,6 +39,11 @@ const suma = sable1.precio + sable2.precio;
 console.log("El importe por ambos sables ascendería a " + suma + " $");
 
 
+
+// 4. Actualizando el precio final de las naves:
+
+// Modifica el valor de la variable global precioBaseGlobal a 25.000 créditos.
+// Actualiza el precio final (precioFinal) de dos naves ("Ala-X" y "Halcón Milenario") sumando el valor de precioBaseGlobal a su precio base (precioBase).
 
 const precioBaseGlobal = 25000; /* Solo tendría que cambiar este valor y cambiaría el precio final de ambas naves */
 
