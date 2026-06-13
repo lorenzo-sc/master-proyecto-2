@@ -21,7 +21,7 @@ let contador_modernas = 0;
 const Peliculas_Antiguas = [];
 const Peliculas_Modernas = [];
 
-for (Peli of movies){
+for (let Peli of movies){
     if (Peli.releaseYear < 2000){
         Peliculas_Antiguas.push(Peli.title + " -> " + Peli.releaseYear)
         contador_antiguas++
