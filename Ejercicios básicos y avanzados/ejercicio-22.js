@@ -27,7 +27,7 @@ for (let schedule of foodSchedule) {
 console.log(foodSchedule);
 console.log(" ");
 
-// --- Mi enfoque: construyo un array nuevo con los nombres/frutas ---
+// --- Mi enfoque alternativo: Un array nuevo con los nombres/frutas ---
 
 const foodScheduleOriginal = [
   { name: "Heura", isVegan: true },
