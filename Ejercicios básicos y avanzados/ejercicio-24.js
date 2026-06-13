@@ -16,7 +16,7 @@ const characters = [
 const humanCharacters = [];
 
 
-for (personaje of characters){
+for (let personaje of characters){
     if (personaje.species === "Human")
         humanCharacters.push(personaje)
 };
