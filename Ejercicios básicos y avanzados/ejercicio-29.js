@@ -16,32 +16,35 @@ const starWarsMovies = [
     { title: 'Solo', releaseYear: 2018 }
 ];
 
-/* 
+const peliculas_por_decadas = {}; // Objeto en el que voy a agrupar las películas
 
-1. Acumulador → cuando pides UN número (suma, promedio, total). Ej: el 28 (sumar duraciones), el 25 (contar).
-2. Filtro a array nuevo → cuando pides una LISTA de los que cumplen algo. Ej: el 24 (humanos), el 23 (pelis por duración).
-3. Contador/agrupar con objeto → cuando agrupas o cuentas cuántas veces aparece cada cosa. Ej: el 29 (por décadas), el 30 (por géneros).
-4. Campeón/buscar uno → cuando pides UN solo elemento (el mayor, el más antiguo). Ej: el 27 (cartoon más antiguo).
-5. Recorrer y mostrar → cuando solo imprimes varias cosas. Ej: el 15, el 16, el 17.
-
-*/
-
-// Tipo 3
-
-const peliculas_por_decadas = {};
+starWarsMovies.sort((a, b) => a.releaseYear - b.releaseYear); // Los ordeno por año para que entren en el bucle ya ordenadas y facilitar su visión en la terminal
 
 for (let movie of starWarsMovies) {
 
-let decada_calculada = (Math.floor( movie.releaseYear / 10  ) * 10); /* 1983 / 10 = 198.3 + math.floor = 198 * 10 = 1980 % 100 = 80 */
+    // Convierto los datos al formato en el que quiero que se presenten
 
-if (peliculas_por_decadas[decada_calculada]){ // ¿peliculas_por_decadas[decada_calculada] ya tiene algo?
+    let decada_calculada = (Math.floor( movie.releaseYear / 10  ) * 10); // (1983 / 10) = 198.3 → Math.floor = 198 → * 10 = 1980
+    let nombre_decada; // Establezco otra variable vacía en la que aparcar los valores transformados de la decada_calculada
 
-    peliculas_por_decadas[decada_calculada].push(movie) // Si ya tiene algo → peliculas_por_decadas[decada_calculada].push(movie) → añade la peli a lo que ya había.
-}
+    if (decada_calculada < 2000) {
+        nombre_decada = ("Década de los " + (decada_calculada % 100))
+    }
+    else {
+        nombre_decada = ("Década de los " + decada_calculada)
+    }
 
+    // Preparo la estructura de la respuesta esperada
+
+    if (peliculas_por_decadas[nombre_decada]){ // ¿peliculas_por_decadas[nombre_decada] ya tiene algo?
+
+    // Si:
+        peliculas_por_decadas[nombre_decada].push(movie)} //peliculas_por_decadas[nombre_decada].push(movie) → añade la peli a lo que ya había
+
+    // No:
 else {
-    peliculas_por_decadas[decada_calculada] = [movie]; // Si no tiene nada → peliculas_por_decadas[decada_calculada] = [movie] → mete la peli ahí por primera vez.
-}
+        peliculas_por_decadas[nombre_decada] = [movie]; // peliculas_por_decadas[nombre_decada] = [movie] → mete la peli ahí por primera vez
+    }
 };
 
-console.log(peliculas_por_decadas); // Mostramos en consola el array de las películas con su década
+console.log(peliculas_por_decadas); // Muestra en consola el objeto donde las claves son las décadas y los valores son arrays de películas
