@@ -46,5 +46,4 @@ else {
         peliculas_por_decadas[nombre_decada] = [movie]; // peliculas_por_decadas[nombre_decada] = [movie] → mete la peli ahí por primera vez
     }
 };
-
 console.log(peliculas_por_decadas); // Muestra en consola el objeto donde las claves son las décadas y los valores son arrays de películas
